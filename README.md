@@ -12,18 +12,19 @@ ao longo da graduação e espero que possa ajudar outras pessoas também.
 
 ## Como executar
 
-Instalar python e os pacotes listados em _requerimentos_. Depois, basta executar o
-arquivo main.py e seguir as instruções que aparecem na tela. Se quiser avaliar algum
+Fazer o download do executável no [link](https://github.com/joao-gabrielC/Bot-Avaliacao-Docente-UFMG/releases/download/v0.1.0/Bot-Avaliacao-Docente-UFMG.exe).
+Depois, basta executar o arquivo e seguir as instruções que aparecem na tela. Se quiser avaliar algum
 professor, responda manualmente antes de executar o script já que em todos os
-professores será marcada a opção de "não desejo responder".
+professores não avaliados será marcada a opção de "não desejo responder".
 
-## Requerimentos
-
-- selenium
-- webdriver\_manager
 
 ## Limitações
 
 - Se houver mais de uma página, o script só acessa os nomes da primeira página.
 Para contornar isso, passe a página manualmente e o script conseguirá reconhecer
 os próximos nomes automaticamente.
+
+## Requerimentos
+
+- selenium
+- webdriver\_manager
