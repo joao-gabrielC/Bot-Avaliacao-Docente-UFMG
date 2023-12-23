@@ -13,12 +13,19 @@ print('Execução do programa\n\n')
 
 while True:
     try:
-        elem = presenceByXpath(browser, '//*[contains(text(), "preenchido")]/../a', 1000)
+        try:
+            elem = presenceByXpath(browser, '//*[contains(text(), "preenchido")]/../a', 10)
+        except selenium.common.exceptions.TimeoutException:
+            elem = presenceByXpath(browser, '//*[@id="formPesquisa:tabEntidade:scrollerDaTabela_table"]/tbody/tr/td[6]')
+            browser.execute_script("arguments[0].scrollIntoView();", elem)
+            time.sleep(1)
+            elem.click()
+            elem = presenceByXpath(browser, '//*[contains(text(), "preenchido")]/../a', 10)
         browser.execute_script("arguments[0].scrollIntoView();", elem)
         print(f'Professor: {elem.text}') 
         time.sleep(1)
         elem.click()
-        elem = clickableByXpath(browser, '//*[@id="formCadastro:AcaoResponderQuestionario_situacaoQueroResponder:1"]', 10000)
+        elem = clickableByXpath(browser, '//*[@id="formCadastro:AcaoResponderQuestionario_situacaoQueroResponder:1"]', 2000)
         elem.click()
         time.sleep(1)
     except Exception as e:
