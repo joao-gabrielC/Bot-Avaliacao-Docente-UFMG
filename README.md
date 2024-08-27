@@ -8,7 +8,7 @@ ao longo da graduação e espero que possa ajudar outras pessoas também.
 
 ## Última atualização
 
-2023/1
+2024/1
 
 ## Como executar
 
